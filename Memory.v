@@ -1,3 +1,6 @@
+`include "src/and.v"
+`include "src/data_memory.v"
+`include "src/mem_wb.v"
 module MEMORY(
  input wire clk,
  input wire [1:0] wb_ctlout,
