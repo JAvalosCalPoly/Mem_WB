@@ -8,7 +8,7 @@ output wire [31:0] read_data
 reg [31:0] DMEM[0:255];
 integer i;
 initial begin
-$readmemb("data.txt",DMEM);
+$readmemb("src/data.txt",DMEM);
 for (i = 0; i < 6; i = i + 1)
 $display("\tDMEM[%0d] = %0b", i, DMEM[i]);
 end

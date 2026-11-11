@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-module memoryTB();
-=======
 module memoryTB ();
->>>>>>> e9a2fbc (TB)
     reg clk;
     reg [31:0] ALUResult, WriteData;
     reg [4:0] WriteReg;
@@ -42,7 +38,6 @@ module memoryTB ();
     end
 
     initial begin
-<<<<<<< HEAD
     ALUResult = 32'h00000004;
     WriteData = 32'h12345678;
     WriteReg = 5'h02;
@@ -81,44 +76,4 @@ module memoryTB ();
 
     $finish;
 end
-=======
-        ALUResult = 32'h00000004;
-        WriteData = 32'h12345678;
-        WriteReg = 5'h02;
-        WBControl = 2'b11;
-        MemWrite = 0;
-        MemRead = 1;
-        Branch = 0;
-        Zero = 0;
-        #10;
-
-        ALUResult = 32'h00000008;
-        WBControl = 2'b00;
-        MemWrite  = 1;
-        MemRead   = 0;
-        #10;
-
-        WBControl = 2'b11;
-        MemWrite  = 0;
-        MemRead   = 1;
-        #10;
-
-        ALUResult = 32'hDEADBEEF;
-        WBControl = 2'b10;
-        MemRead   = 0;
-        #10;
-
-        Branch = 1;
-        Zero   = 0;
-        #10;
-
-        Zero = 1;
-        #10;
-
-        Branch = 0;
-        #10;
-
-        $finish;
-    end
->>>>>>> e9a2fbc (TB)
 endmodule
